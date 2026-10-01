@@ -6,6 +6,8 @@ Two Apex actions an Agentforce service agent can call: **Get Policy Summary** (r
 
 > **Representative portfolio project and learning build.** Written independently with synthetic data; no employer or client code. This repo contains the actions, permissions and tests. The agent itself (topic, instructions, channel) is configured in Agent Builder in an org with Agentforce enabled and is **not** stored here. See "Wire it into an agent" below.
 
+**Skills shown:** Agentforce · Invocable Apex (`@InvocableMethod`) · user-mode SOQL/DML security · bulkified Apex · least-privilege permission sets · Apex unit testing · CI with GitHub Actions and PMD
+
 ## Business problem
 
 Insurance contact centers spend a large share of time on "is my policy active?" and "how do I change my address?". An AI agent can handle these if, and only if, its actions:
@@ -54,8 +56,6 @@ sf apex run test --code-coverage --result-format human --wait 20
 3. Topic instructions, for example: "Verify the customer's identity before any policy action. Use Get Policy Summary for status or payment questions. Use Create Policy Service Request for changes; confirm the request type and details first. Never read out full policy numbers of other people."
 4. Add both Apex actions to the topic. Map **Verified Contact Id** from the verified-identity step, not from user input.
 5. Test in the Agent Builder conversation preview with the synthetic records from the tests.
-
-Record a short screen capture of step 5 and add it to this README before featuring the repo; that is the evidence a hiring manager will look for.
 
 ## Tests
 
