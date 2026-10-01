@@ -1,5 +1,7 @@
 # Agentforce Policy Service Actions (Invocable Apex)
 
+[![CI](https://github.com/Mounika-Mangiri/Agentforce-policy-service-actions/actions/workflows/ci.yml/badge.svg)](https://github.com/Mounika-Mangiri/Agentforce-policy-service-actions/actions/workflows/ci.yml)
+
 Two Apex actions an Agentforce service agent can call: **Get Policy Summary** (read-only status for a verified customer) and **Create Policy Service Request** (opens a Case for a human team). Built so the agent can answer routine policy questions without being able to change a policy or see another customer's data.
 
 > **Representative portfolio project and learning build.** Written independently with synthetic data; no employer or client code. This repo contains the actions, permissions and tests. The agent itself (topic, instructions, channel) is configured in Agent Builder in an org with Agentforce enabled and is **not** stored here. See "Wire it into an agent" below.
@@ -56,6 +58,9 @@ sf apex run test --code-coverage --result-format human --wait 20
 Record a short screen capture of step 5 and add it to this README before featuring the repo; that is the evidence a hiring manager will look for.
 
 ## Tests
+
+CI runs on every push: Prettier (parses every Apex class) and PMD static analysis. The `apex-tests` job deploys to a scratch org and runs the Apex tests below only when a Dev Hub auth URL is saved as the `SFDX_AUTH_URL` repository secret; until then it is skipped.
+
 
 | Test | Covers |
 | --- | --- |
