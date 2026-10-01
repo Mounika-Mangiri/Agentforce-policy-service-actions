@@ -1,0 +1,12 @@
+{
+  "orgName": "agentforce-policy-service-actions demo",
+  "edition": "Developer",
+  "features": [
+    "EnableSetPasswordInApi"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    }
+  }
+}
